@@ -27,29 +27,29 @@ const amenities = [
 
 const Amenities: React.FC = () => {
   return (
-    <section id="amenities" className="py-24 bg-white">
+    <section id="amenities" className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-brand-100 pb-12">
-          <div className="max-w-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 md:mb-16 border-b border-brand-100 pb-12">
+          <div className="max-w-2xl text-center md:text-left">
             <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Facilities</span>
             <h2 className="text-4xl md:text-5xl font-serif text-brand-900 leading-tight">
               On-Site Amenities
             </h2>
           </div>
-          <p className="mt-6 md:mt-0 text-brand-600 max-w-md text-right font-light">
+          <p className="mt-6 md:mt-0 text-brand-600 max-w-md text-center md:text-right font-light">
              Enjoy our curated selection of essential services during your stay.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 md:gap-y-16">
           {amenities.map((item, index) => (
-            <div key={index} className="flex flex-col gap-6 items-start group">
-              <div className="p-4 bg-brand-50 text-brand-800 rounded-sm group-hover:bg-brand-900 group-hover:text-white transition-colors duration-500 relative">
+            <div key={index} className="flex flex-row md:flex-col gap-4 md:gap-6 items-start group">
+              <div className="p-3 md:p-4 bg-brand-50 text-brand-800 rounded-sm group-hover:bg-brand-900 group-hover:text-white transition-colors duration-500 relative shrink-0">
                 {/* Cast to ReactElement<any> to allow className prop injection via cloneElement */}
-                {React.cloneElement(item.icon as React.ReactElement<any>, { className: "h-8 w-8" })}
+                {React.cloneElement(item.icon as React.ReactElement<any>, { className: "h-6 w-6 md:h-8 md:w-8" })}
               </div>
               <div>
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-3 mb-1 md:mb-2">
                     <h4 className="text-lg font-serif font-medium text-brand-900">{item.title}</h4>
                     {item.status && (
                         <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full ${item.status === 'Open' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
