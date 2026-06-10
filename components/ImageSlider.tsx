@@ -99,12 +99,12 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, idx) => (
-          <div key={idx} className="w-full h-full flex-shrink-0 relative">
+          <div key={idx} className="w-full h-full flex-shrink-0 relative bg-brand-100">
             <img
               src={img}
               alt={`${alt} - View ${idx + 1}`}
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         ))}

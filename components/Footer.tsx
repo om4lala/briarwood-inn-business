@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hotel, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Hotel, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const addressQuery = encodeURIComponent("116 Market Avenue Fairfield Illinois");
@@ -37,14 +37,6 @@ const Footer: React.FC = () => {
             <p className="text-brand-200 text-lg font-light leading-relaxed max-w-md">
               A welcoming retreat in Fairfield. Experience hometown hospitality and comfortable living.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 border border-brand-700 flex items-center justify-center rounded-full hover:bg-white hover:text-brand-900 transition-all">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a href="#" className="w-10 h-10 border border-brand-700 flex items-center justify-center rounded-full hover:bg-white hover:text-brand-900 transition-all">
-                <Facebook className="h-4 w-4" />
-              </a>
-            </div>
           </div>
 
           {/* Contact */}
@@ -68,10 +60,6 @@ const Footer: React.FC = () => {
                 <a href="tel:+16188423667" className="hover:text-white transition-colors block py-1 flex items-center gap-3">
                   <Phone className="h-4 w-4 text-brand-400" />
                   (618) 842-3667
-                </a>
-                <a href="mailto:stay@briarwoodinn.com" className="hover:text-white transition-colors block py-1 flex items-center gap-3">
-                  <Mail className="h-4 w-4 text-brand-400" />
-                  stay@briarwoodinn.com
                 </a>
               </li>
             </ul>

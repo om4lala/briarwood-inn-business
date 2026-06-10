@@ -194,7 +194,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
                 setScale(1);
                 setCurrentIndex(idx);
               }}
-              className={`h-14 w-20 md:h-16 md:w-24 rounded overflow-hidden border-2 flex-shrink-0 transition-all duration-300 ${
+              className={`relative h-14 w-20 md:h-16 md:w-24 rounded overflow-hidden border-2 flex-shrink-0 transition-all duration-300 ${
                 currentIndex === idx 
                   ? 'border-brand-300 scale-105 shadow-md shadow-brand-300/50' 
                   : 'border-transparent opacity-40 hover:opacity-100'
@@ -203,7 +203,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
               <img
                 src={img}
                 alt={`Thumbnail view ${idx + 1}`}
-                className="w-full h-full object-cover pointer-events-none"
+                className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
             </button>
