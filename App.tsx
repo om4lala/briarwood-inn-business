@@ -12,17 +12,27 @@ const App: React.FC = () => {
     {
       id: 'double',
       name: 'Double Room',
-      description: 'Perfect for families or friends sharing travel. Features two comfortable double beds and a cozy sitting area.',
+      description: 'Perfect for families or friends sharing travel. Features two comfortable double beds, a private bathroom, and a spacious vanity area.',
       price: '$79.99',
-      image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      features: ['Two Double Beds', 'Cable TV', 'Work Desk', 'Free Wi-Fi']
+      image: '/double_bed_bedroom.jpg',
+      images: [
+        '/double_bed_bedroom.jpg',
+        '/vanity.jpg',
+        '/hotel_bathroom.jpg'
+      ],
+      features: ['Two Double Beds', 'Private Bathroom', 'Vanity Counter', 'Cable TV', 'Work Desk', 'Free Wi-Fi']
     },
     {
       id: 'king',
       name: 'King Room',
       description: 'A spacious room featuring one large King bed. Ideal for couples looking for a comfortable and relaxing stay.',
       price: '$75.99',
-      image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/king_bedroom.jpg',
+      images: [
+        '/king_bedroom.jpg',
+        '/vanity.jpg',
+        '/hotel_bathroom2.jpg'
+      ],
       features: ['One King Bed', 'Lounge Chair', 'Cable TV', 'Mini Fridge']
     },
     {
@@ -31,6 +41,11 @@ const App: React.FC = () => {
       description: 'Our largest option with extra space to spread out. Includes a kitchenette and a small living area.',
       price: '$149',
       image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      images: [
+        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', // Suite main
+        'https://images.unsplash.com/photo-1560067174-8846c4f36bc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', // Living area
+        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'  // Bathroom
+      ],
       features: ['King Bed + Sofa', 'Kitchenette', 'Dining Area', 'Large Bath']
     }
   ];

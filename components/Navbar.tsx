@@ -26,7 +26,15 @@ const Navbar: React.FC = () => {
     const element = document.getElementById(targetId);
     
     if (element) {
-      const offset = 100; // Account for fixed header height
+      // Default offset for fixed header
+      let offset = 100; 
+
+      // On desktop, scroll further down for the Rooms section so the "Call to Book" buttons are clearly visible.
+      // A smaller offset value means the page scrolls further down.
+      if (targetId === 'rooms' && window.innerWidth >= 768) {
+        offset = 40;
+      }
+
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;

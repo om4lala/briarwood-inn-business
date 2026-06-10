@@ -4,6 +4,7 @@ export interface Room {
   description: string;
   price: string;
   image: string;
+  images?: string[];
   features: string[];
 }
 
