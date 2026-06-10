@@ -31,7 +31,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
           onImageClick={handleOpenLightbox}
         />
         <div className="absolute bottom-4 left-4 bg-brand-900/95 text-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm z-20 backdrop-blur-sm shadow-md pointer-events-none select-none">
-           {room.price} / night
+           {room.id === 'double' || room.id === 'king' ? `${room.price}/night plus tax` : `${room.price} / night`}
         </div>
       </div>
       

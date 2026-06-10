@@ -13,7 +13,7 @@ const App: React.FC = () => {
       id: 'double',
       name: 'Double Room',
       description: 'Perfect for families or friends sharing travel. Features two comfortable double beds, a private bathroom, and a spacious vanity area.',
-      price: '$79.99',
+      price: '$75.99',
       image: '/double_bed_bedroom.jpg',
       images: [
         '/double_bed_bedroom.jpg',
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       id: 'king',
       name: 'King Room',
       description: 'A spacious room featuring one large King bed. Ideal for couples looking for a comfortable and relaxing stay.',
-      price: '$75.99',
+      price: '$65.99',
       image: '/king_bedroom.jpg',
       images: [
         '/king_bedroom.jpg',

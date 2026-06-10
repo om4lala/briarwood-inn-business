@@ -15,6 +15,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
   showZoomIcon = true,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [portraitImages, setPortraitImages] = useState<Record<number, boolean>>({});
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   
@@ -99,12 +100,30 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, idx) => (
-          <div key={idx} className="w-full h-full flex-shrink-0 relative bg-brand-100">
+          <div key={idx} className="w-full h-full flex-shrink-0 relative bg-brand-100 overflow-hidden">
+            {portraitImages[idx] && (
+              <img
+                src={img}
+                alt=""
+                referrerPolicy="no-referrer"
+                className="absolute inset-0 w-full h-full object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+              />
+            )}
             <img
               src={img}
               alt={`${alt} - View ${idx + 1}`}
               referrerPolicy="no-referrer"
-              className="absolute inset-0 w-full h-full object-cover"
+              onLoad={(e) => {
+                const target = e.currentTarget;
+                if (target.naturalHeight > target.naturalWidth) {
+                  setPortraitImages((prev) => ({ ...prev, [idx]: true }));
+                }
+              }}
+              className={
+                portraitImages[idx]
+                  ? "absolute inset-0 w-full h-full object-contain z-10"
+                  : "absolute inset-0 w-full h-full object-cover"
+              }
             />
           </div>
         ))}
@@ -145,25 +164,8 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
             <ChevronRight className="h-5 w-5" />
           </button>
 
-          {/* Indicators */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 bg-black/25 px-2.5 py-1 rounded-full backdrop-blur-[2px]">
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setCurrentIndex(idx);
-                }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  currentIndex === idx ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/80'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-          
           {/* Slide index number */}
-          <div className="absolute top-4 left-4 bg-black/60 text-white px-2.5 py-1 text-xs font-medium rounded-md z-20 backdrop-blur-sm">
+          <div className="absolute bottom-3 right-4 bg-black/60 text-white px-2.5 py-1 text-xs font-medium rounded-md z-20 backdrop-blur-sm">
             {currentIndex + 1} / {images.length}
           </div>
         </>
