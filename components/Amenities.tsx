@@ -44,7 +44,7 @@ const Amenities: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 md:gap-y-16">
           {amenities.map((item, index) => (
             <div key={index} className="flex flex-row md:flex-col gap-4 md:gap-6 items-start group">
-              <div className="p-3 md:p-4 bg-brand-50 text-brand-800 rounded-sm group-hover:bg-brand-900 group-hover:text-white transition-colors duration-500 relative shrink-0">
+              <div className="p-3 md:p-4 bg-brand-100 text-brand-800 rounded-sm group-hover:bg-brand-900 group-hover:text-white transition-colors duration-500 relative shrink-0">
                 {/* Cast to ReactElement<any> to allow className prop injection via cloneElement */}
                 {React.cloneElement(item.icon as React.ReactElement<any>, { className: "h-6 w-6 md:h-8 md:w-8" })}
               </div>

@@ -70,8 +70,8 @@ const App: React.FC = () => {
           </div>
 
           {/* Call-In Rate Disclaimer Banner */}
-          <div className="max-w-3xl mx-auto mb-12 bg-white border border-brand-100 rounded-lg p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
-            <div className="p-3 bg-brand-50 rounded-full text-brand-950 flex-shrink-0">
+          <div className="max-w-3xl mx-auto mb-12 bg-brand-100/60 border border-brand-200 rounded-lg p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
+            <div className="p-3 bg-white rounded-full text-brand-900 shadow-sm flex-shrink-0">
               <Phone className="h-6 w-6 text-brand-900 animate-pulse" />
             </div>
             <div>
@@ -94,11 +94,11 @@ const App: React.FC = () => {
 
         {/* Minimalist Call to Action */}
         <section className="relative py-32 px-4 bg-brand-900 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-30">
              <img 
-               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-               className="w-full h-full object-cover grayscale" 
-               alt="Serene Midwestern countryside of Fairfield, Illinois" 
+               src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80" 
+               className="w-full h-full object-cover" 
+               alt="A peaceful flat rural road winding through Midwestern fields in Fairfield, Illinois" 
                referrerPolicy="no-referrer"
              />
           </div>
