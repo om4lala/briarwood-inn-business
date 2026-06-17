@@ -31,17 +31,20 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
           onImageClick={handleOpenLightbox}
         />
         <div className="absolute bottom-4 left-4 bg-brand-900/95 text-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm z-20 backdrop-blur-sm shadow-md pointer-events-none select-none">
-           {room.id === 'double' || room.id === 'king' ? `${room.price}/night plus tax` : `${room.price} / night`}
+           {room.price}/night plus tax
         </div>
       </div>
       
       {/* Content Section */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-2xl font-serif text-brand-900 mb-3">
+        <h3 className="text-2xl font-serif text-brand-900 mb-1">
           {room.name}
         </h3>
+        <p className="text-[11px] text-brand-600 font-semibold uppercase tracking-wider mb-4 flex items-center gap-1">
+          <Phone className="h-3 w-3 inline-block" /> Call-In Exclusive Rate
+        </p>
         
-        <p className="text-brand-700 font-light text-base mb-6 flex-grow">
+        <p className="text-brand-700 font-light text-base mb-6 flex-grow border-t border-brand-50 pt-3">
           {room.description}
         </p>
 

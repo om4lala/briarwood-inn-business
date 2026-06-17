@@ -39,12 +39,13 @@ const App: React.FC = () => {
       id: 'suite',
       name: 'Family Suite',
       description: 'Our largest option with extra space to spread out. Includes a kitchenette and a small living area.',
-      price: '$149',
-      image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      price: '$139.99',
+      image: '/suite_bedroom.jpg',
       images: [
-        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', // Suite main
-        'https://images.unsplash.com/photo-1560067174-8846c4f36bc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', // Living area
-        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'  // Bathroom
+        '/suite_bedroom.jpg',
+        '/suite_living_room.jpg',
+        '/suite_kitchenette.jpg',
+        '/suite_vanity.jpg'
       ],
       features: ['King Bed + Sofa', 'Kitchenette', 'Dining Area', 'Large Bath']
     }
@@ -67,6 +68,19 @@ const App: React.FC = () => {
               Clean, comfortable, and affordable rooms for your stay in Fairfield.
             </p>
           </div>
+
+          {/* Call-In Rate Disclaimer Banner */}
+          <div className="max-w-3xl mx-auto mb-12 bg-white border border-brand-100 rounded-lg p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
+            <div className="p-3 bg-brand-50 rounded-full text-brand-950 flex-shrink-0">
+              <Phone className="h-6 w-6 text-brand-900 animate-pulse" />
+            </div>
+            <div>
+              <h3 className="text-brand-900 font-bold text-base mb-1 font-serif">Special Call-In Only Rates</h3>
+              <p className="text-sm text-brand-700 font-light leading-relaxed">
+                The room rates shown below are exclusive discounts available <strong className="font-semibold text-brand-900">only for reservations made directly by telephone</strong>. Call us today to lock in these special rates!
+              </p>
+            </div>
+          </div>
           
           {/* Changed to Grid for simpler layout */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -81,7 +95,12 @@ const App: React.FC = () => {
         {/* Minimalist Call to Action */}
         <section className="relative py-32 px-4 bg-brand-900 overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-             <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" className="w-full h-full object-cover grayscale" alt="texture" />
+             <img 
+               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+               className="w-full h-full object-cover grayscale" 
+               alt="Serene Midwestern countryside of Fairfield, Illinois" 
+               referrerPolicy="no-referrer"
+             />
           </div>
           <div className="relative max-w-4xl mx-auto text-center z-10">
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-8 leading-tight">
