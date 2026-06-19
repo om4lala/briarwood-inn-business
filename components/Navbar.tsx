@@ -4,6 +4,7 @@ import { Menu, X, Hotel, Phone } from 'lucide-react';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,22 +66,19 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onClick={scrollToTop}>
-            <img 
-              src="/BriarwoodInnLogo.png" 
-              alt="Briarwood Inn Logo" 
-              className="h-9 w-auto object-contain block group-hover:scale-105 transition-transform duration-300"
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                const fallback = document.getElementById('navbar-fallback-icon');
-                if (fallback) {
-                  fallback.style.display = 'block';
-                }
-              }}
-            />
-            <div id="navbar-fallback-icon" style={{ display: 'none' }} className={`p-2 rounded-sm transition-colors ${scrolled || isOpen ? 'text-brand-900' : 'text-white'}`}>
-               <Hotel className="h-6 w-6" />
-            </div>
+            {!logoError ? (
+              <img 
+                src="/BriarwoodInnLogo.png" 
+                alt="Briarwood Inn Logo" 
+                className="h-10 w-auto object-contain block group-hover:scale-105 transition-transform duration-300"
+                referrerPolicy="no-referrer"
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div className={`p-2 rounded-sm transition-colors ${scrolled || isOpen ? 'text-brand-900' : 'text-white'}`}>
+                 <Hotel className="h-6 w-6" />
+              </div>
+            )}
             <span className={`font-serif text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled || isOpen ? 'text-brand-900' : 'text-white'}`}>
               Briarwood Inn
             </span>
