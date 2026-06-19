@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
               <img 
                 src="/BriarwoodInnLogo.png" 
                 alt="Briarwood Inn Logo" 
-                className="h-10 w-auto object-contain block group-hover:scale-105 transition-transform duration-300"
+                className="h-10 w-auto object-contain block rounded-md group-hover:scale-105 transition-transform duration-300"
                 referrerPolicy="no-referrer"
                 onError={() => setLogoError(true)}
               />
