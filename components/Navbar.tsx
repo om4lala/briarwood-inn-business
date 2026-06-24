@@ -16,6 +16,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Rooms', href: '#rooms' },
+    { name: 'Property Tour', href: '#gallery' },
     { name: 'Amenities', href: '#amenities' },
   ];
 
@@ -24,15 +25,19 @@ const Navbar: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
+    
+    // Set hash to let App.tsx state-synced listener trigger the active tab state
+    window.location.hash = href;
+    
+    const elementId = (targetId === 'rooms' || targetId === 'gallery') ? 'explore' : targetId;
+    const element = document.getElementById(elementId);
     
     if (element) {
       // Default offset for fixed header
       let offset = 100; 
 
-      // On desktop, scroll further down for the Rooms section so the "Call to Book" buttons are clearly visible.
-      // A smaller offset value means the page scrolls further down.
-      if (targetId === 'rooms' && window.innerWidth >= 768) {
+      // On desktop, scroll further down for the explore section so the active tabs are clearly visible.
+      if ((targetId === 'rooms' || targetId === 'gallery') && window.innerWidth >= 768) {
         offset = 40;
       }
 
