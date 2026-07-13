@@ -146,6 +146,47 @@ const App: React.FC = () => {
 
         <Amenities />
 
+        {/* Guest Policies & Support Section */}
+        <section id="policies" className="py-20 md:py-24 bg-brand-50/50 border-t border-b border-brand-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white border border-brand-200/60 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
+              {/* Cancellation Policy Column */}
+              <div className="p-8 sm:p-12 border-b md:border-b-0 md:border-r border-brand-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Guest Guidelines</span>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Cancellation Policy</h3>
+                  <p className="text-sm text-brand-600 leading-relaxed font-light mb-6">
+                    We understand that plans can change. To avoid penalty fees, please notify us of any cancellations or changes to your reservation at least <strong className="font-semibold text-brand-900">24 hours in advance</strong> of your scheduled arrival.
+                  </p>
+                </div>
+                <div className="text-[10px] text-brand-400 font-mono tracking-wider">
+                  SECURE BOOKING • FLEXIBLE DEPARTURES
+                </div>
+              </div>
+
+              {/* Questions / Call Column */}
+              <div className="p-8 sm:p-12 bg-brand-50/30 flex flex-col justify-between">
+                <div>
+                  <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Direct Support</span>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Have Questions?</h3>
+                  <p className="text-sm text-brand-600 leading-relaxed font-light mb-6">
+                    Our front desk staff is always here to assist. If you have any questions about room selections, property accessibility, or direct booking details, please call us!
+                  </p>
+                </div>
+                <div>
+                  <a 
+                    href="tel:+16188423667" 
+                    className="inline-flex items-center gap-3 bg-brand-900 text-white hover:bg-brand-950 px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-md hover:scale-[1.02] w-full justify-center sm:w-auto"
+                  >
+                    <Phone className="h-4 w-4 text-brand-300" />
+                    Call (618) 842-3667
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Minimalist Call to Action */}
         <section className="relative py-32 px-4 bg-brand-900 overflow-hidden">
           <div className="absolute inset-0 opacity-30">

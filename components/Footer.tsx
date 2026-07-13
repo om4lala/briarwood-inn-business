@@ -87,6 +87,15 @@ const Footer: React.FC = () => {
                   Amenities
                 </a>
               </li>
+              <li>
+                <a 
+                  href="#policies" 
+                  onClick={(e) => handleNavClick(e, '#policies')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Policies
+                </a>
+              </li>
             </ul>
           </div>
         </div>

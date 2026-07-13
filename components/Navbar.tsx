@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
     { name: 'Rooms', href: '#rooms' },
     { name: 'Property Tour', href: '#gallery' },
     { name: 'Amenities', href: '#amenities' },
+    { name: 'Policies', href: '#policies' },
   ];
 
   const phoneNumber = "tel:+16188423667";
