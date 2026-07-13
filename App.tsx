@@ -156,7 +156,7 @@ const App: React.FC = () => {
                   <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Guest Guidelines</span>
                   <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Cancellation Policy</h3>
                   <p className="text-sm text-brand-600 leading-relaxed font-light mb-6">
-                    We understand that plans can change. To avoid penalty fees, please notify us of any cancellations or changes to your reservation at least <strong className="font-semibold text-brand-900">24 hours in advance</strong> of your scheduled arrival.
+                    We understand that plans can change. If you notify us of any cancellations or changes to your reservation at least <strong className="font-semibold text-brand-900">24 hours in advance</strong> of your scheduled arrival, you will receive a <strong className="font-semibold text-brand-900">full refund</strong> with no penalty fees.
                   </p>
                 </div>
                 <div className="text-[10px] text-brand-400 font-mono tracking-wider">
