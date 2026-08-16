@@ -85,8 +85,8 @@ const Navbar: React.FC = () => {
                  <Hotel className="h-6 w-6" />
               </div>
             )}
-            <span className={`font-serif text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled || isOpen ? 'text-brand-900' : 'text-white'}`}>
-              Briarwood Inn
+            <span className={`font-serif text-xl sm:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled || isOpen ? 'text-brand-900' : 'text-white'}`}>
+              Briarwood Inn <span className="hidden sm:inline">Fairfield</span>
             </span>
           </div>
           

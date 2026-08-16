@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="lg:col-span-2 space-y-8">
             <div className="flex items-center gap-3">
-              <span className="font-serif text-3xl text-white">Briarwood Inn</span>
+              <span className="font-serif text-3xl text-white">Briarwood Inn Fairfield</span>
             </div>
             <p className="text-brand-200 text-lg font-light leading-relaxed max-w-md">
               A welcoming retreat in Fairfield. Experience hometown hospitality and comfortable living.

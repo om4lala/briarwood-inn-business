@@ -37,9 +37,12 @@ const Hero: React.FC = () => {
         <h2 className="text-white/90 text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-6">
           Welcome to the Countryside
         </h2>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-none tracking-tight">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-2 leading-none tracking-tight">
           Briarwood Inn
         </h1>
+        <h2 className="font-serif text-3xl md:text-5xl text-brand-200 mb-8 font-light italic">
+          Fairfield
+        </h2>
         <div className="w-24 h-px bg-white/60 mx-auto mb-8"></div>
         <p className="text-white/90 text-lg md:text-2xl font-light mb-12 max-w-2xl mx-auto font-sans leading-relaxed">
           A cozy, single-story sanctuary where comfort meets tradition. <br className="hidden md:block"/>
