@@ -148,10 +148,10 @@ const App: React.FC = () => {
 
         {/* Guest Policies & Support Section */}
         <section id="policies" className="py-20 md:py-24 bg-brand-50/50 border-t border-b border-brand-100">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white border border-brand-200/60 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white border border-brand-200/60 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {/* Cancellation Policy Column */}
-              <div className="p-8 sm:p-12 border-b md:border-b-0 md:border-r border-brand-100 flex flex-col justify-between">
+              <div className="p-8 sm:p-12 border-b lg:border-b-0 md:border-r border-brand-100 flex flex-col justify-between">
                 <div>
                   <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Guest Guidelines</span>
                   <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Cancellation Policy</h3>
@@ -164,8 +164,22 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {/* Weekly Rates Column */}
+              <div className="p-8 sm:p-12 border-b md:border-b-0 lg:border-r border-brand-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Extended Stays</span>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Weekly Rates</h3>
+                  <p className="text-sm text-brand-600 leading-relaxed font-light mb-6">
+                    Planning a longer visit? We offer special weekly rates for guests looking for extended stays. <strong className="font-semibold text-brand-900">Please call in for our current weekly rates</strong> and availability.
+                  </p>
+                </div>
+                <div className="text-[10px] text-brand-400 font-mono tracking-wider">
+                  STAY LONGER • SAVE MORE
+                </div>
+              </div>
+
               {/* Questions / Call Column */}
-              <div className="p-8 sm:p-12 bg-brand-50/30 flex flex-col justify-between">
+              <div className="p-8 sm:p-12 bg-brand-50/30 flex flex-col justify-between md:col-span-2 lg:col-span-1 border-t md:border-t-0">
                 <div>
                   <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Direct Support</span>
                   <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Have Questions?</h3>
