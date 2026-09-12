@@ -170,7 +170,7 @@ const App: React.FC = () => {
                   <span className="text-brand-500 font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Extended Stays</span>
                   <h3 className="font-serif text-2xl sm:text-3xl text-brand-900 mb-4 font-medium">Weekly Rates</h3>
                   <p className="text-sm text-brand-600 leading-relaxed font-light mb-6">
-                    Planning a longer visit? We offer special weekly rates for guests looking for extended stays. <strong className="font-semibold text-brand-900">Please call in for our current weekly rates</strong> and availability.
+                    Planning a longer visit? We offer extended stay accommodations at a special rate of <strong className="font-semibold text-brand-900 text-base">$425 per week</strong>. Please call us to check availability and book your extended stay.
                   </p>
                 </div>
                 <div className="text-[10px] text-brand-400 font-mono tracking-wider">

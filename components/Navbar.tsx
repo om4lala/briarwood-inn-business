@@ -64,11 +64,22 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-6'
-      }`}
-    >
+    <div className="fixed w-full z-50 transition-all duration-500 flex flex-col">
+      {/* Announcement Bar */}
+      <div className="bg-brand-900 text-white text-xs sm:text-sm font-medium tracking-wide py-2.5 px-4 text-center shadow-md relative z-50">
+        <span className="font-bold text-brand-300 uppercase tracking-[0.2em] mr-2 text-[10px] sm:text-xs">Exclusive Deal</span> 
+        Extended stays now <strong className="text-white">$425/week</strong>. 
+        <a href="tel:+16188423667" className="ml-2 underline hover:text-brand-200 transition-colors inline-flex items-center gap-1">
+          <Phone className="h-3 w-3 inline" /> Call to book
+        </a>
+      </div>
+
+      {/* Main Navigation */}
+      <nav 
+        className={`w-full transition-all duration-500 ${
+          scrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4 md:py-6'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onClick={scrollToTop}>
@@ -146,6 +157,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
